@@ -1,0 +1,70 @@
+for num in range(2, 100):
+    is_prime = True
+    for i in range(2, (num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime =False
+        break
+    if is_prime:
+        print(num)
+
+a,b = 0,1
+for _ in range(20):
+    a, b = b, a+b
+    print(a)
+    
+for i in range(100, 999):
+    a = i // 100
+    b = i // 10 % 10
+    c = i % 10
+    if i == a**3 + b**3 + c**3:
+        print(i)
+
+num = int(input('num = '))
+reversed_num = 0
+while num > 0:
+    reversed_num = reversed_num * 10 + num % 10
+    num //= 10
+print(reversed_num)
+
+for x in range(0, 21):
+    for y in range(0, 34):
+        for z in range(0, 100, 3):
+            if 5 * x + 3 * y + z // 3 == 100 and x + y + z == 100:
+                print(f'公鸡：{x}只,母鸡:{y}只,小鸡:{z}只')
+
+for x in range(0, 21):
+    for y in range(0, 34):
+        z = 100 - x - y
+        if 5 * x + 3 * y + z // 3 == 100 and z % 3 == 0:
+            print(f'公鸡：{x}只,母鸡:{y}只,小鸡:{z}只')
+
+import random
+
+money = 100
+while money > 0:
+    print(f'您的总资产是{money}元')
+    while True:
+        debt = int(input('请下注:'))
+        if 0 < debt < money:
+            break
+    first_point = random.randrange(1,7) + random.randrange(1,7)
+    print(f'\n玩家摇出了{first_point}点')
+    if first_point == 7 or first_point == 11:
+        print('玩家获胜\n')
+        money += debt
+    elif first_point == 2 or first_point == 3 or first_point == 12:
+        print('庄家获胜\n')
+        money -= debt
+    else:
+        while True:
+            current_point = random.randrange(1,7) + random.randrange(1,7)
+            print(f'\n玩家摇出了{current_point}点')
+            if current_point == first_point:
+                print('玩家获胜\n')
+                money += debt
+                break
+            elif current_point == 7:
+                print('庄家获胜\n')
+                money -= debt
+                break
+print('您破产了，游戏结束！')

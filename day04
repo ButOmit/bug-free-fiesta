@@ -1,0 +1,62 @@
+print(321+12)
+print(321-12)
+print(321*12)
+print(321/12)
+print(321//12) # 整除
+print(321%12) # 取余
+print(321**12) # 幂运算
+
+print(2 + 3 * 5)           # 17
+print((2 + 3) * 5)         # 25
+print((2 + 3) * 5 ** 2)    # 125
+print(((2 + 3) * 5) ** 2)  # 625
+
+a = 10
+b = 3
+a += b        # 相当于：a = a + b
+a *= a + 2    # 相当于：a = a * (a + 2)
+print(a) 
+
+print((a:=10))
+print(a)
+
+flag0 = 1 == 1
+flag1 = 3 > 2
+flag2 = 2 < 1
+flag3 = flag1 and flag2
+flag4 = flag1 or flag2
+flag5 = not flag0
+print('flag0=',flag0)
+print('flag1=',flag1)
+print('flag2=',flag2)
+print('flag3=',flag3)
+print('flag4=',flag4)
+print('flag5=',flag5)
+print(flag1 and not flag2)  # True
+print(1 > 2 or 2 == 3) 
+
+f = float(input('请输入华氏温度: '))
+c = (f-32)/1.8
+print(f'{f:.1f}华氏度 = {c:.1f}摄氏度')
+
+radius = float(input('请输入圆的半径: '))
+perimeter = 2 * 3.1416 * radius
+area = 3.1416 * radius * radius
+print('周长: %.2f' % perimeter)
+print('面积: %.2f' % area)
+
+radius = float(input('请输入圆的半径: '))
+perimeter = 2 * math.pi * radius
+area = math.pi * radius ** 2
+print(f'周长: {perimeter:.2f}')
+print(f'面积: {area:.2f}')
+
+radius = float(input('请输入圆的半径: '))  # 输入: 5.5
+perimeter = 2 * math.pi * radius
+area = math.pi * radius ** 2
+print(f'{perimeter = :.2f}')  # 输出：perimeter = 34.56
+print(f'{area = :.2f}')       # 输出：area = 95.03
+
+year = int(input('请输入年份: '))
+is_leap = year % 4 == 0 and year % 100 != 0 or year % 400 == 0
+print(f'{is_leap = }')

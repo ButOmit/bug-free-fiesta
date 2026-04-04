@@ -105,3 +105,12 @@ print(s.find('o'))       # 4
 print(s.rfind('o'))      # 7
 print(s.rindex('o'))     # 7
 # print(s.rindex('o', 8))  # ValueError: substring not found
+
+s1 = 'hello, world!'
+print(s1.startswith('He'))   # False
+print(s1.startswith('hel'))  # True
+print(s1.endswith('!'))      # True
+s2 = 'abc123456'
+print(s2.isdigit())  # False
+print(s2.isalpha())  # False
+print(s2.isalnum())  # True

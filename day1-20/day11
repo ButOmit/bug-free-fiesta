@@ -121,3 +121,7 @@ print(s.rjust(20))        #         hello, world
 print(s.ljust(20, '~'))   # hello, world~~~~~~~~
 print('33'.zfill(5))      # 00033
 print('-33'.zfill(5))     # -0033
+
+a = 321
+b = 123
+print('%d * %d = %d' % (a, b, a * b))

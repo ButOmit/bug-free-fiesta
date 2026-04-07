@@ -125,3 +125,7 @@ print('-33'.zfill(5))     # -0033
 a = 321
 b = 123
 print('%d * %d = %d' % (a, b, a * b))
+
+a = 321
+b = 123
+print('{0} * {1} = {2}'.format(a, b, a * b))

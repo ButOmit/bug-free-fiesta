@@ -139,3 +139,7 @@ print(s1.strip())      # jackfrued@126.com
 s2 = '~你好，世界~'
 print(s2.lstrip('~'))  # 你好，世界~
 print(s2.rstrip('~'))  # ~你好，世界
+
+s = 'hello, good world'
+print(s.replace('o', '@'))     # hell@, g@@d w@rld
+print(s.replace('o', '@', 1))  # hell@, good world

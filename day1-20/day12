@@ -86,3 +86,9 @@ print(set1)  # {1, 1000, 10000}
 # 清空元素
 set1.clear()
 print(set1)  # set()
+
+set1 = {'Java', 'Python', 'C++', 'Kotlin'}
+set2 = {'Kotlin', 'Swift', 'Java', 'Dart'}
+set3 = {'HTML', 'CSS', 'JavaScript'}
+print(set1.isdisjoint(set2))  # False
+print(set1.isdisjoint(set3))  # True

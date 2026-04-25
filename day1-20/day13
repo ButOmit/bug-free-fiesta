@@ -74,9 +74,14 @@ print(person['addr'])
 person['age'] = 25
 person['height'] = 178
 person['tel'] = '13122334455'
-person['signature'] = '你的男朋友是一个盖世垃圾，他会踏着五彩祥云去迎娶你的闺蜜'
+person['signature'] = '你会踏着五彩祥云去迎娶你的闺蜜'
 print(person)
 
 # 循环遍历
 for key in person:
     print(f'{key}:\t{person[key]}')
+
+person = {'name': '王大锤', 'age': 25, 'height': 178, 'addr': '成都市武侯区科华北路62号1栋101'}
+print(person.get('name'))       # 王大锤
+print(person.get('sex'))        # None
+print(person.get('sex', True))  # True

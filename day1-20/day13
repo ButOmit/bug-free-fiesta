@@ -85,3 +85,10 @@ person = {'name': '王大锤', 'age': 25, 'height': 178, 'addr': '成都市武�
 print(person.get('name'))       # 王大锤
 print(person.get('sex'))        # None
 print(person.get('sex', True))  # True
+
+person = {'name': '王大锤', 'age': 25, 'height': 178}
+print(person.keys())    # dict_keys(['name', 'age', 'height'])
+print(person.values())  # dict_values(['王大锤', 25, 178])
+print(person.items())   # dict_items([('name', '王大锤'), ('age', 25), ('height', 178)])
+for key, value in person.items():
+    print(f'{key}:\t{value}')

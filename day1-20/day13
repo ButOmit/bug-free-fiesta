@@ -97,3 +97,8 @@ for key, value in person.items():
 person2 = {'age': 25, 'addr': '成都市武侯区科华北路62号1栋101'}
 person1.update(person2)
 print(person1)  # {'name': '王大锤', 'age': 25, 'height': 178, 'addr': '成都市武侯区科华北路62号1栋101'}
+
+person = {'name': '王大锤', 'age': 25, 'height': 178, 'addr': '成都市武侯区科华北路62号1栋101'}
+del person['age']
+del person['addr']
+print(person)  # {'name': '王大锤', 'height': 178}

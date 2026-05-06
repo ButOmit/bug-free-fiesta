@@ -110,3 +110,17 @@ print(person.popitem())   # ('addr', '成都市武侯区科华北路62号1栋101
 print(person)             # {'name': '王大锤', 'height': 178}
 person.clear()
 print(person)             # {}
+
+person = {'name': '王大锤', 'age': 25, 'height': 178, 'addr': '成都市武侯区科华北路62号1栋101'}
+del person['age']
+del person['addr']
+print(person)  # {'name': '王大锤', 'height': 178}
+
+sentence = input('请输入一段话: ')
+counter = {}
+for ch in sentence:
+    if 'A' <= ch <= 'Z' or 'a' <= ch <= 'z':
+        counter[ch] = counter.get(ch, 0) + 1
+sorted_keys = sorted(counter, key=counter.get, reverse=True)
+for key in sorted_keys:
+    print(f'{key} 出现了 {counter[key]} 次.')

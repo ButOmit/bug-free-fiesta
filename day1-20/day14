@@ -57,3 +57,6 @@ def make_judgement(a, b, c):
 
 print(make_judgement(1, 2, 3))  # False
 print(make_judgement(4, 5, 6))  # True
+
+print(make_judgement(b=2, c=3, a=1))  # False
+print(make_judgement(c=6, b=4, a=5))  # True
